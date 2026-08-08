@@ -52,9 +52,19 @@ export const  Eisenhower : Commander = {
   efficiency:  80,
   casualties:  550_000,
   photo: ""
+}; 
+export const defaultCommander: Commander = {
+  id: 6, 
+  name: "Манштейн",
+  country: "Германия",
+  efficiency: 85,
+  casualties: 700000,
+  photo: ""
 };
 export const commanders: Commander[] = [
   zhukov,
   rokossovsky,
-  rommel
+  rommel,
+  defaultCommander
 ];
+  
