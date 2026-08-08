@@ -1,23 +1,10 @@
 import { useState } from 'react'
 import './App.css'
-    interface Commander {
-   id: 1          
-  name: string;        
-  country: string;     
-  efficiency: number;  
-  cost: number;        
-  photo: string;       
-  biography?: string;  
-}
-const commander: Commander = {
-  id: 1,
-  name: "Георгий Жуков",
-  country: "СССР",
-  efficiency: 85,
-  cost: 90,
-  photo: ""
-};
+import type { Commander } from './commanders/commanders';
+ import { commanders as initialCommanders } from './commanders/commanders';
 function App() {
+   const [commanders, setCommanders] = useState<Commander[]>(initialCommanders);
+
  return <h1>gh</h1>
 }
 
