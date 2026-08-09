@@ -2,18 +2,20 @@ import { useState } from 'react'
 import './App.css'
 import type { Commander } from './commanders/commanders';
  import { commanders as initialCommanders } from './commanders/commanders';
+ import { defaultCommander } from './commanders/commanders';
  
 function App() {
    const [commanders, setCommanders] = useState<Commander[]>(initialCommanders);
-  function addCommander(newCommander: Commander) {
+  function addCommander() {
   setCommanders((prevCommanders) => [
     ...prevCommanders,
     {
-      ...newCommander,
+      ...defaultCommander,
       id: Date.now()
     }
   ]);
 }
+
 
 
 
