@@ -6,7 +6,8 @@
   name: string;        
   country: string;     
   efficiency: number;  
-  casualties: number;        
+  casualties: number; 
+  TO : string;       
   photo: string;       
   biography: string;  
 }
@@ -15,9 +16,10 @@
   name: "Георгий Жуков",
   country: "СССР",
   efficiency: 20,
+    TO: "Eastern Front",
   casualties:  3_529_700,
   photo: "",
-  biography :""
+  biography : "Marshal of the Soviet Union. His career rose with the victory at Khalkhin Gol (1939), followed by the Yelnya offensive, the critical Defense of Moscow, the brutal Battles of Rzhev, and the breakthrough at the Seelow Heights, culminating in the capture of Berlin."
 };
 
  export const  rokossovsky: Commander = {
@@ -25,11 +27,10 @@
   name: "Константин Рокоссовский",
   country: "СССР",
   efficiency: 60,
+  TO: "Eastern Front",
   casualties:  2_589_800,
   photo: "",
-  biography: " Годы жизни и происхождениеДата рождения: 21 декабря 1896 года.Место рождения: Город Великие Луки (Псковская губерния) или Варшава (указывалась в поздних анкетах).Отец: Ксаверий Юзеф Рокоссовский, поляк, железнодорожный машинист.Мать: Антонина Овсянникова, русская, учительница.Дата смерти: 3 августа 1968 года (71 год), похоронен на Красной площади в Москве.⛓️ Арест и репрессииДата ареста: 17 августа 1937 года.Причина: Ложное обвинение в связях с польской и японской разведками.Заключение: Находился под следствием во внутренней тюрьме НКВД в Ленинграде (Кресты).Стойкость: Подвергался жестоким пыткам (ему выбили зубы, сломали ребра, трижды выводили на ложный расстрел), но не подписал признаний и никого не оговорил.Освобождение: 22 марта 1940 года полностью реабилитирован, восстановлен в звании и правах благодаря ходатайству С. К. Тимошенко.💍 Семейное положениеЖена: Юлия Петровна Бармина (в девичестве).Свадьба: 30 апреля 1923 года. Супруги прожили вместе всю жизнь.Дети: Дочь Ариадна (родилась в 1925 году).Фронтовой роман: Во время войны у него были отношения с военврачом Галиной Талановой, в 1945 году у них родилась дочь Надежда (Рокоссовский дал ей свою фамилию и помогал всю жизнь).⚔️ Участие в ключевых операциях Великой Отечественной войны Рокоссовский командовал войсками в самых решающих сражениях Великой Отечественной войны:Битва за Москву (1941): Командовал 16-й армией, оборонял Волоколамское направление, остановил немцев на подступах к столице.Сталинградская битва (1942–1943): Возглавлял Донской фронт. Окружил и взял в плен 300-тысячную группировку фельдмаршала Паулюса (операция «Кольцо»).Курская битва (1943): Командовал Центральным фронтом. Создал уникальную глубоко эшелонированную оборону и полностью измотал немецкие танковые дивизии.Операция «Багратион» (1944): Возглавлял 1-й Белорусский фронт. Предложил нанести два одновременных главных удара вместо одного, что привело к полному разгрому немецкой группы армий «Центр» и освобождению Белоруссии.Восточно-Прусская и Берлинская операции (1945): В качестве командующего 2-м Белорусским фронтом громил противника на севере Германии, сковав крупные силы врага и обеспечив Жукову успешный штурм Берлина.Парад Победы: 24 июня 1945 года командовал историческим Парадом Победы в Москве.",
-};
-
+ }
  export const rommel: Commander = {
   id: 3,
   name: "Эрвин Роммель",
@@ -37,7 +38,8 @@
   efficiency: 95,
   casualties:  250_000,
   photo: "",
-  biography :""
+  TO : "MTO",
+  biography :"",
 };
 export const  Montgomery : Commander = {
   id: 4,
@@ -46,6 +48,7 @@ export const  Montgomery : Commander = {
   efficiency: 75,
   casualties:  185_000,
   photo: "",
+  TO :"MTO",
   biography :"",
 };
 
@@ -56,7 +59,8 @@ export const  Eisenhower : Commander = {
   efficiency:  80,
   casualties:  550_000,
   photo: "",
-  biography : ""
+  TO :"ETO",
+  biography : "General of the Army and Supreme Commander of the Allied Expeditionary Force in Europe. He masterminded Operation Overlord (D-Day) and successfully coordinated the Allied drive into Germany to end the war in Europe",
 }; 
 export const defaultCommander: Commander = {
   id: 6, 
@@ -65,7 +69,8 @@ export const defaultCommander: Commander = {
   efficiency: 85,
   casualties: 700000,
   photo: "",
-  biography : "",
+  TO : "Eastern Front",
+  biography : "Field Marshal of the Wehrmacht, widely regarded as one of Germany's most talented strategists. He drafted the invasion plan for France (1940), captured Sevastopol in the Crimean campaign, executed the backhand blow at Kharkov, and commanded Army Group South during the Battle of Kursk",
 };
 export const commanders: Commander[] = [
   zhukov,
