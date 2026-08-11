@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo} from 'react'
 import './App.css'
 import type { Commander } from './commanders/commanders';
  import { commanders as initialCommanders } from './commanders/commanders';
@@ -6,6 +6,8 @@ import type { Commander } from './commanders/commanders';
  
 function App() {
    const [commanders, setCommanders] = useState<Commander[]>(initialCommanders);
+    const [isOpen, setIsOpen] = useState(false);
+
   function addCommander() {
   setCommanders((prevCommanders) => [
     ...prevCommanders,
@@ -15,7 +17,15 @@ function App() {
     }
   ]);
 }
-
+ 
+function openModal () {
+setIsOpen(true)
+} 
+  function closeModal ()  {
+ setIsOpen(false);
+  } 
+   
+ 
 
 
 
