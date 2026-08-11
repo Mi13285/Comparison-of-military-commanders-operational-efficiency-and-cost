@@ -7,6 +7,9 @@ import type { Commander } from './commanders/commanders';
 function App() {
    const [commanders, setCommanders] = useState<Commander[]>(initialCommanders);
     const [isOpen, setIsOpen] = useState(false);
+    const [selectedCountry, setSelectedCountry] = useState<Country | 'All'>('All');
+     const [selectedCommanders, setSelectedCommanders] = useState<Commander[]>(commanders);
+
 
   function addCommander() {
   setCommanders((prevCommanders) => [
@@ -24,12 +27,20 @@ setIsOpen(true)
   function closeModal ()  {
  setIsOpen(false);
   } 
-   
- 
 
-
-
- return <h1>gh</h1>
+  function filteredCommanders() {
+  setSelectedCountry(
+    commanders.filter((item: Commander) => 
+      (item.country === "all" || item.country === "Германия" || item.country ===  "СССР" || item.country === "Великобритания" || item.country === "США") &&
+      (item.TO === "MTO" || item.TO === "Eastern Front")
+    )
+  );
 }
+
+
+return <h1>gh</h1>
+}
+
+ 
 
 export default App
