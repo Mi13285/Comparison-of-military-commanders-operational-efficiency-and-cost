@@ -1,4 +1,4 @@
-import { useState, useMemo} from 'react'
+import { useState, } from 'react'
 import './App.css'
 import type { Commander } from './commanders/commanders';
  import { commanders as initialCommanders } from './commanders/commanders';
@@ -21,12 +21,13 @@ function App() {
   ]);
 }
  
-function openModal () {
-setIsOpen(true)
-} 
-  function closeModal ()  {
- setIsOpen(false);
-  } 
+const openModal = (): void => {
+    setIsOpen(true);
+  };
+
+  const closeModal = (): void => {
+    setIsOpen(false);
+  };
 
   function filteredCommanders() {
   setSelectedCountry(
@@ -35,6 +36,9 @@ setIsOpen(true)
       (item.TO === "MTO" || item.TO === "Eastern Front")
     )
   );
+}
+ function Validation(text: string): boolean {
+    return !!text;
 }
 
 
