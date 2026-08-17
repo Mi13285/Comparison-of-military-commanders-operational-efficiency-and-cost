@@ -42,15 +42,17 @@ const openModal = (): void => {
 }
 
 
- function handleDelete (id : number) : void {
-if (selectedCountry?.Id === id) {
- selectedCountry((prevCountries: any) => prevCountries.filter((item: any) => item.Id !== id));
+ 
+ function handleDelete(id: number): void {
+  if (selectedCountry !== 'All' && selectedCountry?.Id === id) {
+    setCommanders((prevCountry: any) => prevCountry.filter((item: any) => item.Id !== id));
+    setSelectedCountry('All');
+  }
 }
-setSelectedCountry(null)
- }
 
 return <h1>gh</h1>
 }
+
 
  
 
