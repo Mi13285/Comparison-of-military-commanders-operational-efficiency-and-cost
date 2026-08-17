@@ -1,6 +1,4 @@
 
-
-
   export interface Commander {
    id: number;          
   name: string;        

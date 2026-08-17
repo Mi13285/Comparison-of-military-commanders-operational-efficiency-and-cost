@@ -38,9 +38,16 @@ const openModal = (): void => {
   );
 }
  function Validation(text: string): boolean {
-    return !!text;
+    return !!text.trim();
 }
 
+
+ function handleDelete (id : number) : void {
+if (selectedCountry?.Id === id) {
+ selectedCountry((prevCountries: any) => prevCountries.filter((item: any) => item.Id !== id));
+}
+setSelectedCountry(null)
+ }
 
 return <h1>gh</h1>
 }
