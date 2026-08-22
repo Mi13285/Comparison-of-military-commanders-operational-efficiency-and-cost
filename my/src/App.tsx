@@ -3,6 +3,7 @@ import './App.css'
 import type { Commander } from './commanders/commanders';
  import { commanders as initialCommanders } from './commanders/commanders';
  import { defaultCommander } from './commanders/commanders';
+import { CardList } from './components/CardList';
  
 function App() {
    const [commanders, setCommanders] = useState<Commander[]>(initialCommanders);
@@ -44,14 +45,23 @@ const openModal = (): void => {
 
  
  function handleDelete(id: number): void {
-  if (selectedCountry !== 'All' && selectedCountry?.Id === id) {
-    setCommanders((prevCountry: any) => prevCountry.filter((item: any) => item.Id !== id));
+  if (selectedCountry !== 'All' && selectedCountry?.id === id) {
+    setCommanders((prevCountry: any) => prevCountry.filter((item: any) => item.id !== id));
     setSelectedCountry('All');
   }
 }
+ 
+return (
+  <div>
+    <h1>Список командиров</h1>
+    <CardList commanders={commanders} />
+  </div>
+);
 
-return <h1>gh</h1>
 }
+
+
+
 
 
  
